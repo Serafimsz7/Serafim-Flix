@@ -1,5 +1,5 @@
-git config --global user.name GalloJunior
-git config --global user.email gallojunior@gmail.com
+git config --global user.name Serafimsz7
+git config --global user.email juaumxt1107@gmail.com
 
 // Criar uma conta no site themoviedb.org
 
