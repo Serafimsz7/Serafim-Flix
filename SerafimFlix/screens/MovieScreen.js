@@ -5,16 +5,20 @@ import { ChevronLeftIcon } from 'react-native-heroicons/outline';
 import { HeartIcon } from 'react-native-heroicons/solid';
 import { styles, theme } from '../theme';
 import { LinearGradient } from 'expo-linear-gradient';
+import Cast from '../components/cast';
+import Movielist from '../components/movieList';
 
 var { width, height } = Dimensions.get('window');
 
 export default function MovieScreen() {
   const { params: item } = useRoute();
   const [isFavorite, toggleFavorite] = useState(false);
+  const [cast, setCast] = useState([1,2,3,4,5]);
+  const [similarMovies, setSimilarMovies] = useState([1, 2, 3, 4, 5])
   const navigation = useNavigation();
   let movieName = "Joker: Capas e foice";
   useEffect(() => {
-  }, [item]);
+  }, [item])
 
   return (
     <ScrollView
@@ -79,6 +83,10 @@ export default function MovieScreen() {
         <Text className="text-neutral-400 mx-4 tracking-wide">
           Coringa 2 se passa depois da morte dele no primeiro filme ao explodir o Batman no exoplaneta Thanoide-24 
         </Text>
+
+        <Cast navigation={navigation} cast={cast}/>
+
+        <Movielist title="Filmes Similares" hideSeeAll={true} data={similarMovies}/>
 
       </View>
     

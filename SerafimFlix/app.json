@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SerafimFlix",
-    "slug": "SerafimFlix",
+    "name": "movies_app",
+    "slug": "movies_app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
